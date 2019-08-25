@@ -38,43 +38,19 @@
  */
 package com.dariawan.datetime;
 
-import java.time.Clock;
-import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
+import java.time.ZoneOffset;
 
-public class LocalTimeInitExample {
+public class LocalDateFromToEpochExample {
 
     public static void main(String[] args) {
-        LocalTime localTime1 = LocalTime.now();
-        System.out.println("LocalTime1 : " + localTime1);
-
-        LocalTime localTime2 = LocalTime.now(Clock.systemUTC());
-        System.out.println("LocalTime2 : " + localTime2);
+        LocalDate localDate = LocalDate.parse("1980-04-09");
+        System.out.println("LocalDate                : " + localDate);
+        System.out.println("LocalDate.toEpochDay()   : " + localDate.toEpochDay());
+        System.out.println("LocalDate.toEpochSecond(): " + localDate.toEpochSecond(LocalTime.MIDNIGHT, ZoneOffset.UTC));
         
-        LocalTime localTime3 = LocalTime.now(ZoneId.systemDefault());
-        System.out.println("LocalTime3 : " + localTime3);
-        
-        LocalTime localTime4 = LocalTime.of(3, 5, 15);
-        System.out.println("LocalTime4 : " + localTime4);
-        
-        LocalTime localTime5 = LocalTime.of(15, 20, 45, 123456789);
-        System.out.println("LocalTime5 : " + localTime5);
-        
-        LocalTime localTime6 = LocalTime.ofNanoOfDay(86399123456789L);
-        System.out.println("LocalTime6 : " + localTime6);        
-        
-        LocalTime localTime7 = LocalTime.ofSecondOfDay(86399);
-        System.out.println("LocalTime7 : " + localTime7);        
-        
-        LocalTime localTime8 = LocalTime.parse("20:45:30");
-        System.out.println("LocalTime8 : " + localTime8);
-        
-        LocalTime localTime9 = LocalTime.parse("10:15:20", DateTimeFormatter.ISO_LOCAL_TIME);
-        System.out.println("LocalTime9 : " + localTime9);
-        
-        LocalTime localTime10 = LocalTime.ofInstant(Instant.now(), ZoneId.systemDefault());
-        System.out.println("LocalTime10: " + localTime10);
+        LocalDate copyLocalDate = LocalDate.ofEpochDay(localDate.toEpochDay());
+        System.out.println("Copied LocalDate         : " + copyLocalDate);
     }
 }
