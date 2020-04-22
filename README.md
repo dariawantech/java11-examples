@@ -9,7 +9,6 @@ From [Java 11 Features and Changes](https://www.dariawan.com/series/java-11-feat
 * [Multiple Requests Using HTTP/1.1 VS HTTP/2](https://www.dariawan.com/tutorials/java/multiple-requests-using-http11-vs-http2/)
 * [HTTP/2 Server Push and Handling Push Promises](https://www.dariawan.com/tutorials/java/http2-server-push-and-handling-push-promises/)
 * [Java 11 - Local-Variable Syntax for Lambda Parameters (JEP 323)](https://www.dariawan.com/tutorials/java/java-11-local-variable-syntax-lambda-parameters-jep-323/)
-mises/)
 * [Java 11 - Flight Recorder (JEP 328)](https://www.dariawan.com/tutorials/java/java-11-flight-recorder-jep-328/)
 * [Java 11 - Remove the Java EE and CORBA Modules (JEP 320)](https://www.dariawan.com/tutorials/java/java-11-remove-java-ee-and-corba-modules-jep-320/)
 * [Using JAXB in Java 11](https://www.dariawan.com/tutorials/java/using-jaxb-java-11/)
